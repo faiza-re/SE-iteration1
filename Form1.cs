@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SE_iteration1
 {
-    public partial class Form1 : Form
+    public partial class welcome : Form
     {
-        public Form1()
+        public welcome()
         {
             InitializeComponent();
         }
@@ -20,6 +20,26 @@ namespace SE_iteration1
         private void Form1_Load(object sender, EventArgs e)
         {
             Console.WriteLine("hello c#");
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (start.IsValid(textBox1.Text, textBox2.Text) == false)
+            {
+                MessageBox.Show("invalid username or password");
+                return;
+            }
+
+            {
+                mainMenu m = new mainMenu();
+                m.Show();
+                this.Close();
+            }
         }
     }
 }
