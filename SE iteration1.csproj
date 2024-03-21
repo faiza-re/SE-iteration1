@@ -53,12 +53,6 @@
     <Compile Include="adminLogin.Designer.cs">
       <DependentUpon>adminLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="createSociety.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="createSociety.Designer.cs">
-      <DependentUpon>createSociety.cs</DependentUpon>
-    </Compile>
     <Compile Include="EClogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,9 +82,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="adminLogin.resx">
       <DependentUpon>adminLogin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="createSociety.resx">
-      <DependentUpon>createSociety.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EClogin.resx">
       <DependentUpon>EClogin.cs</DependentUpon>
