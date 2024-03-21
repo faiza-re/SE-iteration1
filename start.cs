@@ -2,6 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.IO;
+using System.Windows.Forms;
 
 namespace SE_iteration1
 {
@@ -75,7 +76,7 @@ namespace SE_iteration1
                    
                    
 
-                    string query = "SELECT * FROM EC WHERE ECusername = @user AND ECpassword = @pass";
+                    string query = "SELECT * FROM Student WHERE Studentusername = @user AND password = @pass";
                     using (SqlCommand command = new SqlCommand(query, conn))
                     {
                         command.Parameters.AddWithValue("@user", user);
@@ -100,8 +101,39 @@ namespace SE_iteration1
 
             return isValid;
         }
+        public static int SQL(string query, params SqlParameter[] parameters)
+        {
+            int result = 0;
 
-      
+            try
+            {
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.CommandType = CommandType.Text;
+
+                    if (parameters != null && parameters.Length > 0)
+                    {
+                        cmd.Parameters.AddRange(parameters);
+                    }
+
+                    if (conn.State == ConnectionState.Closed)
+                    {
+                        conn.Open();
+                    }
+
+                    result = cmd.ExecuteNonQuery();
+                }
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+            }
+
+            return result;
+        }
+
     }
 
 

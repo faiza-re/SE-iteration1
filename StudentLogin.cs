@@ -7,29 +7,33 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace SE_iteration1
 {
-    public partial class opening : Form
+    public partial class StudentLogin : Form
     {
-        public opening()
+        public StudentLogin()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            welcome a = new welcome();
-            a.Show(this);
-        
+           
+            if (start.IsValid2(textBox1.Text, textBox2.Text) == false)
+            {
+                MessageBox.Show("invalid username or password");
+                return;
+            }
+            StudentMenu sm = new StudentMenu();
+            sm.Show(this);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            StudentLogin el = new StudentLogin();
-            el.Show(this);
-        
+            opening o=new opening();
+            o.Show(this);
+            this.Close();
         }
     }
 }

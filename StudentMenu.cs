@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace SE_iteration1
 {
-    public partial class createSociety : Form
+    public partial class StudentMenu : Form
     {
-        public createSociety()
+        public StudentMenu()
         {
             InitializeComponent();
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

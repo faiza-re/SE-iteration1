@@ -58,16 +58,17 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Modern No. 20", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(292, 46);
+            this.label7.Location = new System.Drawing.Point(405, 50);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(184, 25);
+            this.label7.Size = new System.Drawing.Size(168, 25);
             this.label7.TabIndex = 12;
-            this.label7.Text = "Create A society";
+            this.label7.Text = "View Societies";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(482, 21);
+            this.pictureBox1.Location = new System.Drawing.Point(579, 21);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(126, 71);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -77,7 +78,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Modern No. 20", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(386, 522);
+            this.button1.Location = new System.Drawing.Point(544, 513);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(161, 51);
             this.button1.TabIndex = 15;
@@ -95,11 +96,11 @@
             this.Contact,
             this.Logo,
             this.Category});
-            this.dataGridView1.Location = new System.Drawing.Point(-1, 112);
+            this.dataGridView1.Location = new System.Drawing.Point(1, 113);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(964, 394);
+            this.dataGridView1.Size = new System.Drawing.Size(1212, 394);
             this.dataGridView1.TabIndex = 17;
             // 
             // Name
@@ -114,14 +115,14 @@
             this.Description.HeaderText = "Description";
             this.Description.MinimumWidth = 8;
             this.Description.Name = "Description";
-            this.Description.Width = 150;
+            this.Description.Width = 300;
             // 
             // Location
             // 
             this.Location.HeaderText = "Location";
             this.Location.MinimumWidth = 8;
             this.Location.Name = "Location";
-            this.Location.Width = 150;
+            this.Location.Width = 200;
             // 
             // Contact
             // 
@@ -144,21 +145,21 @@
             this.Category.HeaderText = "Category";
             this.Category.MinimumWidth = 8;
             this.Category.Name = "Category";
-            this.Category.Width = 150;
+            this.Category.Width = 200;
             // 
             // createSociety
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
-            this.ClientSize = new System.Drawing.Size(967, 585);
+            this.ClientSize = new System.Drawing.Size(1214, 585);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label3);
             this.Font = new System.Drawing.Font("Modern No. 20", 7.999999F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Name = "createSociety";
+            //this.Name = "createSociety";
             this.Text = "createSociety";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
