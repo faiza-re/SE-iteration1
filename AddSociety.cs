@@ -49,7 +49,7 @@ namespace SE_iteration1
             try
             {
                 int rowsAffected = start.SQL(query,
-                    new SqlParameter("@id", id),
+                    new SqlParameter("@ID", id),
                     new SqlParameter("@Name", textBox1.Text),
                     new SqlParameter("@Description", textBox2.Text),
                     new SqlParameter("@Location", textBox3.Text),
@@ -98,6 +98,23 @@ namespace SE_iteration1
             }
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            createSociety cs=new createSociety();
+            cs.Show();
+            this.Hide();
+        }
 
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            mainMenu m=new mainMenu();  
+            m.Show();
+            this.Hide();
+        }
     }
 }

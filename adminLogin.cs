@@ -41,5 +41,12 @@ namespace SE_iteration1
                 this.Close();
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            opening o=  new opening();
+            o.Show();
+            this.Hide();
+        }
     }
 }

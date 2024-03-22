@@ -21,7 +21,8 @@ namespace SE_iteration1
         private void button1_Click(object sender, EventArgs e)
         {
             welcome a = new welcome();
-            a.Show(this);
+            a.Show();
+            this.Hide();
         
         }
 
@@ -29,7 +30,12 @@ namespace SE_iteration1
         {
             StudentLogin el = new StudentLogin();
             el.Show(this);
-        
+        this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

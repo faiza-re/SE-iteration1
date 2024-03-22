@@ -31,6 +31,13 @@ namespace SE_iteration1
         {
             AddSociety a=new AddSociety();
             a.Show();
+            this.Hide();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            createSociety cs=new createSociety();   
+            cs.Show();
         }
     }
 }
