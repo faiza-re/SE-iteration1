@@ -133,7 +133,48 @@ namespace SE_iteration1
 
             return result;
         }
+        public static void loadingData(string query, DataGridView dv, ListBox lb)
+         {
+             try
+             {
+                 if (conn.State == ConnectionState.Closed)
+                 {
+                     conn.Open();
+                 }
+                 SqlCommand cmd = new SqlCommand(query, conn);
+                 cmd.CommandType = CommandType.Text;
 
+                 // Use SqlDataReader for better performance
+                 using (SqlDataReader reader = cmd.ExecuteReader())
+                 {
+                     DataTable dt = new DataTable();
+                     dt.Load(reader);
+                     Console.WriteLine(lb.Items.Count);
+                     for (int i = 0; i < lb.Items.Count; i++)
+                     {
+                         string colName1 = ((DataGridViewColumn)lb.Items[i]).Name;
+
+                         if (dt.Columns.Count > i)
+                         {
+                             dv.Columns[colName1].DataPropertyName = dt.Columns[i].ColumnName;
+                         }
+                         else
+                         {
+                             MessageBox.Show($"Not enough columns in the DataTable for ListBox item {i + 1}");
+                         }
+                     }
+
+                     dv.DataSource = dt;
+                 }
+             }
+             catch (Exception e)
+             {
+                 MessageBox.Show(e.ToString());
+                 conn.Close();
+             }
+         }
+
+      
     }
 
 
