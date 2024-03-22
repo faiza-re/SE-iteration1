@@ -10,27 +10,21 @@ using System.Windows.Forms;
 
 namespace SE_iteration1
 {
-    public partial class mainMenu : Form
+    public partial class createSociety : Form
     {
-        public mainMenu()
+        public createSociety()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void label7_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            AddSociety a=new AddSociety();
-            a.Show();
         }
     }
 }

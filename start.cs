@@ -2,6 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.IO;
+using System.Windows.Forms;
 
 namespace SE_iteration1
 {
@@ -17,22 +18,12 @@ namespace SE_iteration1
 
             try
             {
-                // It's better to create a new connection within a using statement each time you need to connect to the database
+                
                 using (SqlConnection conn = new SqlConnection(con_string))
                 {
                     conn.Open();
 
-                    // Insert admin user (Consider moving this to a different method or ensuring it's only done once, not every time validation is checked)
-                 /*   using (SqlCommand insertCmd = new SqlCommand("INSERT INTO Admin (AdminId, AdminName, AdminUsername, password) VALUES (@adminId, @adminName, @AdminUsername, @password)", conn))
-                    {
-                        insertCmd.Parameters.AddWithValue("@adminId", 1);
-                        insertCmd.Parameters.AddWithValue("@adminName", "faiza Rehman");
-                        insertCmd.Parameters.AddWithValue("@AdminUsername", "faiza_re");
-                        insertCmd.Parameters.AddWithValue("@password", "qwerty");
-                        insertCmd.ExecuteNonQuery();
-                    }*/
-
-                    // Use parameterized query to prevent SQL injection
+               
                     string query = "SELECT * FROM Admin WHERE AdminUsername = @user AND password = @pass";
 
                     using (SqlCommand command = new SqlCommand(query, conn))
@@ -45,11 +36,11 @@ namespace SE_iteration1
                             if (reader.HasRows)
                             {
                                 isValid = true;
-                                USER = user; // Ensure USER is a property or variable that can safely be assigned here
+                                USER = user;
                             }
                         }
                     }
-                } // The connection is automatically closed here, when exiting the using block
+                } 
             }
             catch (Exception ex)
             {
@@ -85,7 +76,7 @@ namespace SE_iteration1
                    
                    
 
-                    string query = "SELECT * FROM EC WHERE ECusername = @user AND ECpassword = @pass";
+                    string query = "SELECT * FROM Student WHERE Studentusername = @user AND password = @pass";
                     using (SqlCommand command = new SqlCommand(query, conn))
                     {
                         command.Parameters.AddWithValue("@user", user);
@@ -96,22 +87,53 @@ namespace SE_iteration1
                             if (reader.HasRows)
                             {
                                 isValid = true;
-                                USER = user; // Ensure USER is a property or variable that can safely be assigned here
+                                USER = user; 
                             }
                         }
                     }
-                } // The connection is automatically closed here, when exiting the using block
+                }
             }
             catch (Exception ex)
             {
-                // Log the exception to a file
+              
                 LogException(ex);
             }
 
             return isValid;
         }
+        public static int SQL(string query, params SqlParameter[] parameters)
+        {
+            int result = 0;
 
-        // Ensure the LogException method is defined as shown previously
+            try
+            {
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.CommandType = CommandType.Text;
+
+                    if (parameters != null && parameters.Length > 0)
+                    {
+                        cmd.Parameters.AddRange(parameters);
+                    }
+
+                    if (conn.State == ConnectionState.Closed)
+                    {
+                        conn.Open();
+                    }
+
+                    result = cmd.ExecuteNonQuery();
+                }
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+            }
+
+            return result;
+        }
+
     }
 
 
