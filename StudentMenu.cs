@@ -19,14 +19,21 @@ namespace SE_iteration1
 
         private void button4_Click(object sender, EventArgs e)
         {
-            createSociety cs = new createSociety();
-            cs.Show();
+            /*createSociety cs = new createSociety();
+            cs.Show();*/
             this.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            JoinSociety j = new JoinSociety();
+            j.Show();
+            this.Close();
         }
     }
 }

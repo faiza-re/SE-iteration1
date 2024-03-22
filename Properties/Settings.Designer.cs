@@ -22,5 +22,16 @@ namespace SE_iteration1.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-RNIE8AN\\SQLEXPRESS;Initial Catalog=Software_Engineering;Integ" +
+            "rated Security=True")]
+        public string Software_EngineeringConnectionString {
+            get {
+                return ((string)(this["Software_EngineeringConnectionString"]));
+            }
+        }
     }
 }

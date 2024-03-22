@@ -24,7 +24,7 @@ namespace SE_iteration1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (start.IsValid2(textBox1.Text, textBox2.Text) == false)
+            if (start.IsUser(textBox1.Text, textBox2.Text) == false)
             {
                 MessageBox.Show("invalid username or password");
                 return;

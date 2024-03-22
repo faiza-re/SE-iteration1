@@ -34,11 +34,11 @@ namespace SE_iteration1
             string query = "";
             if (id == 0)
             {
-                query = "INSERT INTO Society(Name,Description,Location,Contact,Category)Values(@Name,@Description,@Location,@Contact,@Category)";
+                query = "INSERT INTO Society(Name,Description,Location,Contact,Category,GPA)Values(@Name,@Description,@Location,@Contact,@Category,@GPA)";
             }
             else
             {
-                query = "UPDATE Society SET Name = @Name, Description = @Description, Location = @Location, Contact=@Contact, pic=@pic,Category=@Category WHERE ID = @id";
+                query = "UPDATE Society SET Name = @Name, Description = @Description, Location = @Location, Contact=@Contact, pic=@pic,Category=@Category, GPA=@GPA WHERE ID = @id";
             }
             Image temp = new Bitmap(pictureBox1.Image);
             using (MemoryStream ms = new MemoryStream())
@@ -55,7 +55,8 @@ namespace SE_iteration1
                     new SqlParameter("@Location", textBox3.Text),
                      new SqlParameter("@Contact", textBox4.Text),
                       new SqlParameter("@pic", imageByteArray),
-                      new SqlParameter("@Category", comboBox1.Text)
+                      new SqlParameter("@Category", comboBox1.Text),
+                      new SqlParameter("@GPA",textBox5.Text)
                 );
 
                 if (rowsAffected > 0)
@@ -70,6 +71,7 @@ namespace SE_iteration1
                         textBox2.Text = "";
                         textBox3.Text = "";
                         textBox4.Text = "";
+                        textBox5.Text = "";
                         comboBox1.SelectedIndex = -1;
                         textBox1.Focus();
                        // pictureBox2.Image = SE_iteration1.Properties.Resources.;
@@ -100,8 +102,8 @@ namespace SE_iteration1
 
         private void button3_Click(object sender, EventArgs e)
         {
-            createSociety cs=new createSociety();
-            cs.Show();
+            //createSociety cs=new createSociety();
+            //cs.Show();
             this.Hide();
         }
 
@@ -115,6 +117,16 @@ namespace SE_iteration1
             mainMenu m=new mainMenu();  
             m.Show();
             this.Hide();
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

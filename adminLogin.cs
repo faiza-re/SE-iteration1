@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 //TESTING!!
 namespace SE_iteration1
 {
@@ -29,7 +30,7 @@ namespace SE_iteration1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (start.IsValid(textBox1.Text, textBox2.Text) == false)
+            if (start.IsAdmin(textBox1.Text, textBox2.Text) == false)
             {
                 MessageBox.Show("invalid username or password");
                 return;

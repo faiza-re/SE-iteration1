@@ -36,8 +36,8 @@ namespace SE_iteration1
 
         private void button4_Click(object sender, EventArgs e)
         {
-            createSociety cs=new createSociety();   
-            cs.Show();
+            /*createSociety cs=new createSociety();   
+            cs.Show();*/
         }
     }
 }

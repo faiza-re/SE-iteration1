@@ -71,6 +71,12 @@
     <Compile Include="ECmenu.Designer.cs">
       <DependentUpon>ECmenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="JoinSociety.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JoinSociety.Designer.cs">
+      <DependentUpon>JoinSociety.cs</DependentUpon>
+    </Compile>
     <Compile Include="mainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +88,11 @@
     </Compile>
     <Compile Include="opening.Designer.cs">
       <DependentUpon>opening.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Software_EngineeringDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Software_EngineeringDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="start.cs" />
     <Compile Include="Program.cs" />
@@ -109,6 +120,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ECmenu.resx">
       <DependentUpon>ECmenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JoinSociety.resx">
+      <DependentUpon>JoinSociety.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="mainMenu.resx">
       <DependentUpon>mainMenu.cs</DependentUpon>
@@ -140,6 +154,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Software_EngineeringDataSet.xsc">
+      <DependentUpon>Software_EngineeringDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Software_EngineeringDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Software_EngineeringDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Software_EngineeringDataSet.xss">
+      <DependentUpon>Software_EngineeringDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

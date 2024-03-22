@@ -19,14 +19,26 @@ namespace SE_iteration1
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
-            if (start.IsValid2(textBox1.Text, textBox2.Text) == false)
+
+            if (start.IsUser(textBox1.Text, textBox2.Text) == false)
             {
                 MessageBox.Show("invalid username or password");
                 return;
             }
-            StudentMenu sm = new StudentMenu();
-            sm.Show(this);
+            else
+            {
+                if (start.IsMember(textBox1.Text, textBox2.Text) == "EC")
+                {
+                    ECmenu ec = new ECmenu();
+                    ec.Show();
+                    this.Close();
+                }
+                else
+                {
+                    StudentMenu sm = new StudentMenu();
+                    sm.Show(this);
+                }
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)

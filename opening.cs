@@ -30,12 +30,17 @@ namespace SE_iteration1
         {
             StudentLogin el = new StudentLogin();
             el.Show(this);
-        this.Hide();
+            this.Hide();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void opening_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
