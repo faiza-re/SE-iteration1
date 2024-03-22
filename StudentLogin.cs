@@ -44,8 +44,8 @@ namespace SE_iteration1
         private void button2_Click(object sender, EventArgs e)
         {
             opening o=new opening();
-            o.Show(this);
             this.Close();
+            o.Show();
         }
     }
 }

@@ -182,9 +182,8 @@ namespace SE_iteration1
                  }
                  SqlCommand cmd = new SqlCommand(query, conn);
                  cmd.CommandType = CommandType.Text;
-
-                 // Use SqlDataReader for better performance
-                 using (SqlDataReader reader = cmd.ExecuteReader())
+                // Use SqlDataReader for better performance
+                using (SqlDataReader reader = cmd.ExecuteReader())
                  {
                      DataTable dt = new DataTable();
                      dt.Load(reader);

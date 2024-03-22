@@ -102,8 +102,8 @@ namespace SE_iteration1
 
         private void button3_Click(object sender, EventArgs e)
         {
-            //createSociety cs=new createSociety();
-            //cs.Show();
+            viewSociety cs=new viewSociety();
+            cs.Show();
             this.Hide();
         }
 

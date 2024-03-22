@@ -83,6 +83,12 @@
     <Compile Include="mainMenu.Designer.cs">
       <DependentUpon>mainMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="NewSociety.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewSociety.Designer.cs">
+      <DependentUpon>NewSociety.cs</DependentUpon>
+    </Compile>
     <Compile Include="opening.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +115,12 @@
     <Compile Include="StudentMenu.Designer.cs">
       <DependentUpon>StudentMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="viewSociety.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viewSociety.Designer.cs">
+      <DependentUpon>viewSociety.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddSociety.resx">
       <DependentUpon>AddSociety.cs</DependentUpon>
     </EmbeddedResource>
@@ -127,6 +139,9 @@
     <EmbeddedResource Include="mainMenu.resx">
       <DependentUpon>mainMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NewSociety.resx">
+      <DependentUpon>NewSociety.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="opening.resx">
       <DependentUpon>opening.cs</DependentUpon>
     </EmbeddedResource>
@@ -138,12 +153,16 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="StudentLogin.resx">
       <DependentUpon>StudentLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StudentMenu.resx">
       <DependentUpon>StudentMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewSociety.resx">
+      <DependentUpon>viewSociety.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -168,6 +187,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aa1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aa2.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

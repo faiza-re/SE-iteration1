@@ -35,6 +35,9 @@ namespace SE_iteration1
             else if(start.InSociety(comboBox1.Text))
             {
                 MessageBox.Show("You ahve joined the society!!!");
+                NewSociety n=new NewSociety();
+                this.Hide();
+                n.Show();
                 return;
 
             }

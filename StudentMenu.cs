@@ -19,8 +19,8 @@ namespace SE_iteration1
 
         private void button4_Click(object sender, EventArgs e)
         {
-            /*createSociety cs = new createSociety();
-            cs.Show();*/
+            viewSociety cs = new viewSociety();
+            cs.Show();
             this.Hide();
         }
 
@@ -34,6 +34,13 @@ namespace SE_iteration1
             JoinSociety j = new JoinSociety();
             j.Show();
             this.Close();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            opening o=new opening();
+            o.Show();
+            this.Hide();
         }
     }
 }

@@ -39,5 +39,12 @@ namespace SE_iteration1
             /*createSociety cs=new createSociety();   
             cs.Show();*/
         }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            opening o=new opening();
+            o.Show();
+        }
     }
 }
